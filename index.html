@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Disambiguating distinct but visually similar image pairs (doppelgangers) using a learning-based approach">
-  <meta name="keywords" content="Doppelgangers, structure from motion, SfM">
+        content="Disambiguating distinct but visually similar image pairs (doppelgangers) using a learning-based approach.">
+  <meta name="keywords" content="Doppelgangers, structure from motion, sfm disambiguation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Doppelgangers: Learning to Disambiguate Images of Similar Structures</title>
 
@@ -30,13 +30,23 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175559969-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-175559969-1');
+  </script>
+
 </head>
 <body>
 
@@ -77,7 +87,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://arxiv.org/pdf/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -86,7 +96,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -96,17 +106,17 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video</span>
+                  <span>Video (Coming soon)</span>
                 </a>
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/RuojinCai/Doppelgangers"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -116,12 +126,12 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://github.com/RuojinCai/Doppelgangers"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Data (Coming soon)</span>
                   </a>
             </div>
 
@@ -135,14 +145,13 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+      <video id="teaser" autoplay muted loop playsinline height="120%">
+        <source src="./static/videos/teaser_video.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <span class="dnerf">Doppelgangers</span>, images observe distinct but visually similar 3D surfaces, are not only challenging to disambiguate,
+        but are also problematic in practice, particularly for 3D reconstruction pipelines.
       </h2>
     </div>
   </div>
@@ -153,51 +162,45 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
+        <div class="item item-alexander">
+          <video poster="" id="alexander" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/alexander.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
+        <div class="item item-berliner">
+          <video poster="" id="berliner" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/berliner.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
+        <div class="item item-bigben">
+          <video poster="" id="bigben" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/bigben.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-fullbody">
+        <div class="item item-sacre">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
+            <source src="./static/videos/sacre.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
+        <div class="item item-florence">
+          <video poster="" id="florence" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/florence.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
+        <div class="item item-cup">
+          <video poster="" id="cup" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/cup.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
+        <div class="item item-yorkminster">
+          <video poster="" id="yorkminster" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/yorkminster.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -237,7 +240,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -245,8 +248,16 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Acknowledgements</h2>
+    We thank Zhengqi Li, David Fouhey, and Bill Freeman for their helpful input and assistance. 
+    This work was supported in part by the Snap Research Fellowship and by the National Science Foundation (IIS-2008313). (?)
   </div>
 </section>
 
@@ -255,8 +266,8 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@inproceedings{cai2023doppelgangers,
-  author    = {Cai, Ruojin and Tung, Joseph and Wang, Qianqian and Averbuch-Elor, Hadar and Hariharan, Bharath and Snavely, Noah},
   title     = {Doppelgangers: Learning to Disambiguate Images of Similar Structures},
+  author    = {Cai, Ruojin and Tung, Joseph and Wang, Qianqian and Averbuch-Elor, Hadar and Hariharan, Bharath and Snavely, Noah},
   booktitle = {ICCV},
   year      = {2023},
 }</code></pre>
