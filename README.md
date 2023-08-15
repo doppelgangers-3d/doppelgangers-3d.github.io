@@ -4,7 +4,7 @@ This is the repository that contains source code for the [Doppelgangers website]
 
 If you find Doppelgangers useful for your work please cite:
 ```
-@article{cai2023doppelgangers,
+@inproceedings{cai2023doppelgangers,
   title     = {Doppelgangers: Learning to Disambiguate Images of Similar Structures},
   author    = {Cai, Ruojin and Tung, Joseph and Wang, Qianqian and Averbuch-Elor, Hadar and Hariharan, Bharath and Snavely, Noah},
   journal   = {ICCV},
