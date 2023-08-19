@@ -150,8 +150,8 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Doppelgangers</span>, images observe distinct but visually similar 3D surfaces, are not only challenging to disambiguate,
-        but are also problematic in practice, particularly for 3D reconstruction pipelines.
+        <span class="dnerf">Doppelgangers</span> are our name for images that observe distinct but visually similar 3D surfaces. 
+        Doppelgangers are only challenging to disambiguate, and are highly problematic for 3D reconstruction pipelines.
       </h2>
     </div>
   </div>
@@ -238,7 +238,7 @@
             images observe distinct but visually similar 3D surfaces, can be challenging for humans to differentiate, and can also
             lead 3D reconstruction algorithms to produce erroneous results. We propose a learning-based approach to visual
             disambiguation, formulating it as a binary classification task on image pairs. To that end, we introduce a new dataset
-            for this problem, Doppelgangers, which includes image pairs of similar structures with ground truth labels. We also
+            Doppelgangers, which includes image pairs of similar structures. We also
             design a network architecture that takes the spatial distribution of local keypoints and matches as input, allowing for
             better reasoning about both local and global cues. Our evaluation shows that our method can distinguish illusory matches
             in difficult cases, and can be integrated into SfM pipelines to produce correct, disambiguated 3D reconstructions.
