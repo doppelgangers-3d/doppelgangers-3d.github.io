@@ -222,8 +222,73 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
+    <!-- Problem Definition. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Problem Definition: Visual Disambiguation</h2>
+        <img src="static/images/problem_define_web.jpg" class="center" alt="problem_define" width="70%">
+        <div class="content has-text-justified">          
+          <p>
+          Our work addresses the following visual disambiguation
+          problem: Given two possibly very similar images, determine
+          whether they depict the same physical 3D surface (positive pair), or whether
+          they are images of two different 3D surfaces (negative pair). This is a binary
+          classification task on image pairs.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Dataset. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Doppelgangers Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            Based on this formulation, we create the Doppelgangers Dataset, 
+            a benchmark dataset that allows for training and standardized evaluation of visual
+            disambiguation algorithms.
+            Doppelgangers dataset consists of a collection of internet photos of world landmarks and cultural sites that
+            exhibit repeated
+            patterns and symmetric structures. The dataset includes a large number of image pairs, each labeled as either
+            positive
+            or negative based on whether they are true or false (illusory) matching pairs.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/method.jpg" class="center" alt="method"  width="100%">
+          <p>
+            We design a network architecture well-suited for solving
+            pairwise visual disambiguation as a classification
+            problem. 
+            Given a pair of images, we extract keypoints and matches via feature matching methods, and create binary
+            masks of keypoints and matches. 
+            We then align the image pair and masks with an affine transformation estimated from matches. 
+            Our classifier takes the
+            concatenation of the images and binary masks as input and outputs the probability that the given pair is positive.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Test pairs. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Visual Disambiguation Results</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/test_pairs_results.jpg" class="center" alt="method" width="70%">
+          <p>
+            Test pairs
+            and their corresponding probability of being a positive match, as
+            predicted by our network.
+          </p>
+        </div>
+      </div>
+    </div>
     <!-- Paper video. -->
     <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
