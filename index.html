@@ -87,7 +87,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/pdf/2309.02420.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -96,7 +96,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/abs/2309.02420"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -162,7 +162,7 @@
 <section class="hero is-light is-small">  
   <div class="hero-body">    
     <div class="container">      
-      <h2 class="title is-3 has-text-centered">Example Results</h2>
+      <h2 id="sfm-disambiguation" class="title is-3 has-text-centered">Example Results</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-florence">
           <video poster="" id="florence" autoplay controls muted loop playsinline height="100%">
@@ -282,9 +282,12 @@
         <img src="static/images/test_pairs_results.jpg" class="center" alt="test_results" width="70%">
         <div class="content has-text-justified">          
           <p>
-            Test pairs
-            and their corresponding probability of being a positive match, as
-            predicted by our network.
+            We display test pairs and their corresponding probability of being a positive match, as
+            predicted by our network. Our network cleanly separates the negative and positive pairs by score, including
+            in the presence of varying illumination and other factors.
+            One application of our classifier is to integrate it as a filter within a 3D reconstruction pipeline, 
+            allowing us to create high-quality reconstructions from ambiguous collections. 
+            <a href="#sfm-disambiguation">Check out our examples results for Structure-from-Motion disambiguation.</a>
           </p>
         </div>
       </div>
